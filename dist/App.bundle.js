@@ -46,8 +46,7 @@ function activeNavItem() {
     var linkPath = link.getAttribute('href');
     var linkArray = linkPath.split('/');
     var linkCurrentPath = linkArray[linkArray.length - 1];
-    console.log(linkCurrentPath);
-    if (linkCurrentPath === currentPath) {
+    if (linkCurrentPath === currentPath || linkCurrentPath + ".html" === currentPath) {
       link.classList.add('js-nav--item__active');
     }
   });
