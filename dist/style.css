@@ -369,7 +369,7 @@
     --tertiary-color-rgb:   254, 238, 202;
     --font-size-regular:    clamp(1rem, 2vh, 1.25rem);
     --line-height-regular:  clamp(1.5rem, 3vh, 1.875rem);
-    --font-size-big:        calc(var(--font-size-regular) * 2);
+    --font-size-big:        calc(var(--font-size-regular) * 1.8);
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
     --font-size-medium:     calc(var(--font-size-regular) * 1.2);
     --line-height-medium:   calc(var(--line-height-regular) * 1.2);
@@ -391,10 +391,15 @@
 }
 
   
-
-  html {
-    background-color: var(--secondary-color);
+  html, body {
+    width:      100%;
+    overflow-x: hidden;
   }
+
+
+   body {
+    background-color: var(--secondary-color);
+   }
 
   
    
@@ -571,7 +576,10 @@ html {
     display:        flex;
     flex-flow:      column nowrap;
     min-height:     100vh;
-    width:          100vw;
+    width:          100%;
+    position:        relative;
+    
+    
   }
   
   
@@ -589,14 +597,21 @@ html {
     align-items:     center;
     flex-grow:       1;
     gap:             1.875rem;
-    width:           100vw;
+    width:           100%;
     margin-top:      var(--header-height);
+    
   }
 
   .main__vertical {
     flex-flow:      column nowrap;
     gap:            1rem;
     padding:        1rem .5rem 1rem .5rem;
+  }
+
+  @media (max-width: 923px) {
+    main {
+      gap: 0;
+    }
   }
 
 
@@ -647,6 +662,21 @@ html {
       border-color: var(--secondary-color);
       color:        var(--brand-color);
     }
+
+    /* On tablet and mobile there is no hover effect */
+
+    @media (max-width: 923px) {
+      .btn__primary:hover {
+        background:   var(--brand-color) 0% 0% no-repeat padding-box;
+        border-color: var(--brand-color);
+        color:        var(--secondary-color);
+      } 
+      .btn__hollow:hover {
+        background:   transparent;
+        border-color: var(--secondary-color);
+        color:        var(--secondary-color); 
+      }
+    }
   
     
 
@@ -675,7 +705,7 @@ html {
 /*Sticky header*/
 
 header {
-  width:            100vw;
+  width:            100%;
   display:          flex;
   flex-flow:        row nowrap;
   justify-content:  space-between;  
@@ -685,7 +715,9 @@ header {
   padding-left:     10%;
   padding-right:    10%;
   position:         fixed;
-  z-index:          100;  
+  z-index:          100; 
+  
+  
 }
   
 
@@ -722,7 +754,7 @@ header {
   }
 
   .nav {
-    width:           27.0625rem;
+    width:           27.0625%;
     display:         flex;
     flex-flow:       row nowrap;
     justify-content: space-evenly;
@@ -787,14 +819,14 @@ header {
     @media (max-width: 991px) {
     .js-nav--wrapper {
       display: flex;
-      width:   100vw;
+      width:   100%;
       position: fixed;
       top:     var(--header-height);
       left:    0;
     }
 
     .js-nav--wrapper > * {
-      width: 100vw;
+      width: 100%;
     }
       .nav {
         max-height:       0;
@@ -855,7 +887,7 @@ header {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/contacts.css ***!
   \****************************************************************************************************************/
 .content-card {
-    width:           100vw;
+    width:           100%;
     min-height:      calc(100vh - var(--header-height) - var(--footer-height));
     background:      var(--secondary-color) 0% 0% no-repeat padding-box;
     display:         grid;
@@ -866,6 +898,7 @@ header {
        "map open-wrapper";
     padding:        5rem;
     gap:            2rem;
+    
   }
 
   .map {grid-area: map;}
@@ -923,9 +956,8 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows:    auto;
     justify-items:         center;
-    padding:               5rem 10% 5rem 10%;
-    gap:                   1.5rem;
-    /*overflow:              auto;*/
+    padding:               2rem 5% 2rem 5%;
+    
   }
 
   .contact--wrapper {
@@ -937,17 +969,24 @@ header {
     aspect-ratio: 1/1;
     place-self:   center;
   }
+}
 
- 
+@media (max-width: 323px) {
+  .content-card {
+    padding: 2rem 5px 2rem 5px;
+    overflow-x: scroll;
+  }
+  
 }
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/drinks.css ***!
   \**************************************************************************************************************/
 .drinks--background {
-  background: url('/images/photos/onebeer.jpg') no-repeat center / cover;
+  background: url('../images/photos/onebeer.jpg') no-repeat center / cover;
   margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));
   overflow:   auto;
+  width:      100%;
   
 }
 
@@ -1018,6 +1057,7 @@ header {
 
     .table--gap {  /*3*/
       height: .3rem;
+      
     }
 
     
@@ -1035,16 +1075,37 @@ header {
 
 /*MOBILE VERSION*/
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
   .drinks--wrapper {
-    width:   100vw;
+    width:   100%;
     padding: 1rem .5rem 1rem .5rem;
     
   }
   .table--container {
-    width:   max(370px, 90%);
-    padding: .5rem;
+    width:  100%;
+    
   } 
+  
+  .drinks--price {
+    white-space: nowrap;
+    height: 25px;
+    padding-left: 5px;
+  }
+  
+}
+
+@media (max-width: 229px) {
+  .drinks--wrapper {
+    padding: 1rem 0 1rem 0;
+    align-items: flex-start;
+  }
+  .table--container {
+    padding-left:  5px;
+    padding-right: 5px;
+    width: auto;
+    
+    /*overflow-x:    auto;*/
+  }  
 }
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/hero.css ***!
@@ -1052,7 +1113,7 @@ header {
 
 /* Hero picture */
 .hero {
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   object-fit: cover;
 }
@@ -1060,11 +1121,11 @@ header {
 /* Hero background */
 
 .hero--main {
-  background:  url('/images/photos/pub_interior.jpg') no-repeat center / cover; 
+  background:  url('../images/photos/pub_interior.jpg') no-repeat center / cover; 
   background-blend-mode: multiply;
   background-color:   rgba(var(--brand-color-rgb), .3);
   min-height:         var(--hero-height);
-  width:              100vw;
+  width:              100%;
   display:            flex;
   flex-flow:          column nowrap;
   justify-content:    center;
@@ -1108,7 +1169,7 @@ header {
     .text__hero {
       font-size:   var(--font-size-regular);
       line-height: var(--line-height-regular);
-      padding:     0;
+      
     }
   }
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bagoly Pub</title>
     <script src="https://kit.fontawesome.com/af9fa598da.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,11 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&amp;family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/style.css">
     <link rel="icon" type="image/svg+xml" href="/images/icons/logo_light.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script defer src="App.bundle.js"></script><link href="style.css" rel="stylesheet"></head>
+  </head>
   <body>
     <div class="container"> 
-      <header><a class="logo--wrapper" href="/"><img class="logo" src="/images/icons/logo_dark.svg" alt="logo"></a>
+      <header><a class="logo--wrapper" href="/"><img class="logo" src="images/icons/logo_dark.svg" alt="logo"></a>
         <div class="js-nav--wrapper">
           <div>
             <nav class="nav"><a class="js-nav--item text__nav" href="/">Kezdőlap</a><a class="js-nav--item text__nav" href="/kinalat.html">Kínálat</a><a class="js-nav--item text__nav nav--item__last" href="/kapcsolat.html">Kapcsolat</a>
@@ -28,68 +28,75 @@
               <caption class="subtitle table--title">Sörök</caption>
               <thead class="table--header">
                 <td>Csapolt Sörök</td>
-                <td>Pohár </td>
-                <td>Korsó </td>
+                <td class="drinks--price">Pohár </td>
+                <td class="drinks--price">Korsó </td>
               </thead>
               <tr class="table--gap"> </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Gösser Premium</td>
-                <td>790 Ft</td>
-                <td>1090 Ft</td>
+                <td class="drinks--price">790 Ft</td>
+                <td class="drinks--price">1090 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Mort Subite</td>
-                <td>1190 Ft</td>
-                <td>1690 Ft</td>
+                <td class="drinks--price">1190 Ft</td>
+                <td class="drinks--price">1690 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Edelweiß</td>
-                <td>890 Ft</td>
-                <td>1290 Ft</td>
+                <td class="drinks--price">890 Ft</td>
+                <td class="drinks--price">1290 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Mosaic ale</td>
-                <td>890 Ft</td>
-                <td>1290 Ft</td>
+                <td class="drinks--price">890 Ft</td>
+                <td class="drinks--price">1290 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">PLNOTUČNÁ</td>
-                <td>790 Ft</td>
-                <td>1090 Ft</td>
+                <td class="drinks--price">790 Ft</td>
+                <td class="drinks--price">1090 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">FRANCINŮV LEŽÁK</td>
-                <td>590 Ft</td>
-                <td>790 Ft</td>
+                <td class="drinks--price">590 Ft</td>
+                <td class="drinks--price">790 Ft</td>
               </tr>
               <thead class="table--header">
                 <td>Üveges Sörök</td>
-                <td>Ár</td>
+                <td class="table--gap"></td>
+                <td class="drinks--price">Ár</td>
               </thead>
               <tr class="table--gap"> </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">GRIMBERGEN ROUGE - 0,33 l</td>
-                <td>100 Ft</td>
+                <td class="table--gap"></td>
+                <td class="drinks--price">1000 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Heineken - 0,33 l</td>
-                <td>100 Ft</td>
+                <td class="table--gap"></td>
+                <td class="drinks--price">100 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Heineken Silver - 0,33 l</td>
-                <td>100 Ft</td>
+                <td class="table--gap"></td>
+                <td class="drinks--price">100 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Heineken 0.0% - 0,33 l</td>
-                <td>100 Ft</td>
+                <td class="table--gap"></td>
+                <td class="drinks--price">100 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Gösser citrom 0.0% - 0,33 l</td>
-                <td>100 Ft</td>
+                <td class="table--gap"></td>
+                <td class="drinks--price">100 Ft</td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Birra Moretti - 0,33 l</td>
-                <td>100 Ft</td>
+                <td class="table--gap"></td>
+                <td class="drinks--price">100 Ft</td>
               </tr>
             </table>
           </div>
@@ -98,8 +105,8 @@
               <caption class="subtitle table--title">Rövid Italok</caption>
               <thead class="table--header">
                 <td>Gin</td>
-                <td>3 cl </td>
-                <td>5 cl</td>
+                <td class="drinks--price">3 cl </td>
+                <td class="drinks--price">5 cl</td>
               </thead>
               <tr class="table--gap"> </tr>
               <tr class="table--items"> 
@@ -119,8 +126,8 @@
               </tr>
               <thead class="table--header">
                 <td>Likőr</td>
-                <td>3 cl </td>
-                <td>5 cl</td>
+                <td class="drinks--price">3 cl </td>
+                <td class="drinks--price">5 cl</td>
               </thead>
               <tr class="table--gap"> </tr>
               <tr class="table--items"> 
@@ -155,8 +162,8 @@
               </tr>
               <thead class="table--header">
                 <td>Rum</td>
-                <td>3 cl </td>
-                <td>5 cl</td>
+                <td class="drinks--price">3 cl </td>
+                <td class="drinks--price">5 cl</td>
               </thead>
               <tr class="table--gap"> </tr>
               <tr class="table--items"> 
@@ -171,8 +178,8 @@
               </tr>
               <thead class="table--header">
                 <td>Tequila</td>
-                <td>3 cl </td>
-                <td>5 cl</td>
+                <td class="drinks--price">3 cl </td>
+                <td class="drinks--price">5 cl</td>
               </thead>
               <tr class="table--gap"> </tr>
               <tr class="table--items"> 
@@ -187,8 +194,8 @@
               </tr>
               <thead class="table--header">
                 <td>Vodka</td>
-                <td>3 cl </td>
-                <td>5 cl</td>
+                <td class="drinks--price">3 cl </td>
+                <td class="drinks--price">5 cl</td>
               </thead>
               <tr class="table--gap"></tr>
               <tr class="table--items"> 
@@ -208,8 +215,8 @@
               </tr>
               <thead class="table--header">
                 <td>Whisky</td>
-                <td>3 cl </td>
-                <td>5 cl</td>
+                <td class="drinks--price">3 cl </td>
+                <td class="drinks--price">5 cl</td>
               </thead>
               <tr class="table--gap"></tr>
               <tr class="table--items"> 
@@ -234,24 +241,24 @@
               <caption class="subtitle table--title">Üditők</caption>
               <thead class="table--header">
                 <td>Megnevezés</td>
-                <td>Ár</td>
+                <td class="drinks--price">Ár</td>
               </thead>
               <tr class="table--gap"> </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Pepsi</td>
-                <td>100 Ft       </td>
+                <td class="drinks--price">100 Ft       </td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Narancs</td>
-                <td>100 Ft       </td>
+                <td class="drinks--price">100 Ft       </td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Tonik</td>
-                <td>100 Ft       </td>
+                <td class="drinks--price">100 Ft       </td>
               </tr>
               <tr class="table--items"> 
                 <td class="drinks--name">Fever Tree tonik</td>
-                <td>100 Ft       </td>
+                <td class="drinks--price">100 Ft       </td>
               </tr>
             </table>
           </div>
@@ -260,7 +267,7 @@
               <caption class="subtitle table--title">Sörkorcsolyák</caption>
               <thead class="table--header">
                 <td>Megnevezés</td>
-                <td>Ár</td>
+                <td class="drinks--price">Ár</td>
               </thead>
               <tr class="table--gap"> </tr>
             </table>
