@@ -8,7 +8,7 @@ function activeNavItem() {
     let linkPath = link.getAttribute('href');
     let linkArray = linkPath.split('/');
     let linkCurrentPath = linkArray[linkArray.length - 1];
-    if (linkCurrentPath === currentPath || linkPath.replace(".html", "") === currentPath) {
+    if (linkCurrentPath === currentPath) {
       link.classList.add('js-nav--item__active');
     }
   });
