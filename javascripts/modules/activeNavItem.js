@@ -1,4 +1,4 @@
-function activeNavItem() {
+/*function activeNavItem() {
   let links = document.querySelectorAll('.js-nav--item');
   let path = window.location.pathname;
   let pathArray = path.split('/');
@@ -14,6 +14,22 @@ function activeNavItem() {
   });
 
   
+}
+
+export default activeNavItem;*/
+
+function activeNavItem() {
+  let links = document.querySelectorAll('.js-nav--item');
+  let path = window.location.pathname;
+  let currentPath = path.slice(1); // Eltávolítjuk a vezető perjelet
+
+  links.forEach(link => {
+    let linkPath = link.getAttribute('href').slice(1); // Eltávolítjuk a vezető perjelet
+    let linkWithoutExtension = linkPath.replace(".html", ""); // Eltávolítjuk a .html kiterjesztést
+    if (linkWithoutExtension === currentPath || linkPath === currentPath || linkWithoutExtension + ".html" === currentPath || linkPath + ".html" === currentPath) {
+      link.classList.add('js-nav--item__active');
+    }
+  });
 }
 
 export default activeNavItem;
