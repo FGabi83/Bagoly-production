@@ -14,7 +14,6 @@ function accordion() {
       content.classList.toggle('js-active');
       toggleText();
     });
-
     
   };
   
