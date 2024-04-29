@@ -47,8 +47,10 @@ function activeNavItem() {
     var linkCurrentPath = linkArray[linkArray.length - 1];
     var linkWithoutHtml = linkCurrentPath.split('.')[0];
     if (linkCurrentPath === currentPath || linkWithoutHtml === currentPath) {
+      console.log('ok', 'linkCurrentPath:', linkCurrentPath, 'currentPath:', currentPath, 'linkWithoutHtml:', linkWithoutHtml);
       link.classList.add('js-nav--item__active');
     } else {
+      console.log('not ok', 'linkCurrentPath:', linkCurrentPath, 'currentPath:', currentPath, 'linkWithoutHtml:', linkWithoutHtml);
       link.classList.remove('js-nav--item__active');
     }
   });
@@ -73,18 +75,6 @@ function dropdownMenu() {
   });
 }
 /* harmony default export */ __webpack_exports__["default"] = (dropdownMenu);
-
-/***/ }),
-
-/***/ "./public/css/style.css":
-/*!******************************!*\
-  !*** ./public/css/style.css ***!
-  \******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
 
 /***/ })
 
@@ -134,17 +124,15 @@ var __webpack_exports__ = {};
   !*** ./public/javascripts/bagoly-app.js ***!
   \******************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ "./public/css/style.css");
-/* harmony import */ var _modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dropdownMenu */ "./public/javascripts/modules/dropdownMenu.js");
-/* harmony import */ var _modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/activeNavItem */ "./public/javascripts/modules/activeNavItem.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordion */ "./public/javascripts/modules/accordion.js");
+/* harmony import */ var _modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/dropdownMenu */ "./public/javascripts/modules/dropdownMenu.js");
+/* harmony import */ var _modules_activeNavItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/activeNavItem */ "./public/javascripts/modules/activeNavItem.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accordion */ "./public/javascripts/modules/accordion.js");
 
 
 
-
-(0,_modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_modules_accordion__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_modules_activeNavItem__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_modules_accordion__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }();
 /******/ })()
 ;
