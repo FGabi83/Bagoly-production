@@ -519,59 +519,10 @@ html {
         }
       }   
 
-/*
 
-
-@media (max-width: 600px) {
-  .title {
-    font-size:   calc(var(--font-size-big) * .8);
-    line-height: calc(var(--line-height-big) * .8);
-  }
-    .title__extra {
-      font-size:   calc(1.5 * var(--font-size-big)); 
-      line-height: calc(1.5 * var(--line-height-big));
-    }
-  
-  .text--regular__responsive {
-    font-size:   calc(var(--font-size-regular__responsive) * .8);
-    line-height: calc(var(--line-height-regular__responsive) * .8);
-  }
-
-  .text__extra {
-    font-size:   var(--font-size-regular); 
-    line-height: var(--line-height-regular);
-    
-  }
-}
-
-@media (max-width: 470px) {
-  .title {
-    font-size: var(--font-size-regular);
-    line-height: var(--line-height-regular);
-  }
-  .text--regular__responsive {
-    font-size:   var(--font-size-medium);
-    line-height: var(--line-height-medium);
-  }  
-}
-
-*/
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/layout.css ***!
   \**************************************************************************************************************/
-/*--------------------------------*\
-* LAYOUT 
-
-*Container............overall layout of the page
-*
-*Main.................over layout of the content
-*
-\*--------------------------------*/
-
-
-/*--------------------------------*\
-* OVERALL LAYOUT OF THE PAGE
-\*--------------------------------*/
 
 .container {
     display:        flex;
@@ -584,12 +535,6 @@ html {
   }
   
   
-  
-  
-  
-  /*--------------------------------*\
-  * CONTENT LAYOUT
-  \*--------------------------------*/
 
   main {
     display:         flex;
@@ -664,7 +609,7 @@ html {
       color:        var(--brand-color);
     }
 
-    /* On tablet and mobile there is no hover effect */
+    
 
     @media (max-width: 923px) {
       .btn__primary:hover {
@@ -685,7 +630,6 @@ html {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/highlighted-text.css ***!
   \************************************************************************************************************************/
 .highlighted-text {
-  /*letter-spacing:  0.15rem;*/
   text-transform:  uppercase;
   color:           var(--brand-color);
   font-weight:     bold;
@@ -694,16 +638,7 @@ html {
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/header.css ***!
   \**************************************************************************************************************/
-/*
-*Header...............main layout, color, logo size, navbar
-*
-*Header - Navbar..... main layout typography and color, typography,
-*                              and hover effect
-*Mobile version......sandvich menu, padding adjustement 
-*                    of the header
-*/
 
-/*Sticky header*/
 
 header {
   width:            100%;
@@ -717,12 +652,10 @@ header {
   padding-right:    10%;
   position:         fixed;
   z-index:          100; 
-  
-  
+   
 }
   
 
-  /* Logo sets the height of the header */
 
   .logo--wrapper {
     display:         flex;
@@ -748,7 +681,7 @@ header {
     }
     
   
-  /* Navbar */
+ 
 
   .js-nav--wrapper {
     display: flex;
@@ -767,11 +700,11 @@ header {
   
     .js-nav--item {
       opacity:         .65;
-      position:        relative; /* to position the underline */
+      position:        relative; 
       display:         inline-block; 
     }
   
-    /*in case of hover, underline is shown at the bottom of the navbar*/
+    
   
       .js-nav--item:hover::after {
         content:          "";
@@ -791,14 +724,14 @@ header {
         transition:       0.3s;
       }
 
-    /*Active link is highlighted*/
+    
   
       .js-nav--item__active {
         opacity:          1;
       }
   
 
-  /*Sandvich menu is not shown on desktop */
+  
   
   
   .js-nav--menu {
@@ -807,15 +740,6 @@ header {
        
   }
 
-/*--------------------------------*\
-  * MOBILE LAYOUT
-\*--------------------------------*/
-
-/*Sandvich menu*/
-/* 
-* 1) light yellow line separating the menu items 
-* 2) hover effect on mobile version not needed
-*/
 
     @media (max-width: 991px) {
     .js-nav--wrapper {
@@ -834,7 +758,7 @@ header {
         display:          flex;
         width:            100%;
         gap:              0;
-        margin-left:      0; /*desktop version has 3rem margin-left*/
+        margin-left:      0; 
         flex-flow:        column nowrap;
         justify-content:  flex-start;
         align-items:      center;
@@ -874,7 +798,7 @@ header {
       opacity:          .65;
     }
     
-    .js-nav--menu:hover { /*[2]*/
+    .js-nav--menu:hover { 
       opacity:          .65;
     }
     
@@ -926,10 +850,6 @@ header {
       
     }
 
-    
-
-
-      /* Phone and email */
 
         .phone, .email {
           display:        block;
@@ -1002,12 +922,7 @@ header {
     padding:         5% 10% 5% 10%;
   }
 
-/*
-* 1) Brown separator under the table header
-* 2) Making sure all names start with capital letter followed by lowercase
-* 3) Creating gap between the table header and the table items, 
-*    and occasionally between the drinks name and price
-*/
+
 
 .table--container {
   background-color:  rgba(var(--secondary-color-rgb), .9);
@@ -1055,14 +970,14 @@ header {
       }
 
     
-    .table--header::before { /*3*/
+    .table--header::before { 
       content: '';
       display: block;
       width:   100%;
       height:  1.5rem;
     }
 
-    .table--gap {  /*3*/
+    .table--gap {  
       height: .3rem;
       
     }
@@ -1075,18 +990,6 @@ header {
     }
     
 
-      /*.drinks--name {
-        text-transform: lowercase; /*2
-        
-      }
-
-      .drinks--name::first-letter {
-        text-transform: uppercase; /*2
-      }*/
-
-      
-
-/*MOBILE VERSION*/
 
 @media (max-width: 500px) {
   .drinks--wrapper {
@@ -1116,23 +1019,11 @@ header {
     padding-left:  5px;
     padding-right: 5px;
     width: auto;
-    
-    /*overflow-x:    auto;*/
   }  
 }
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/hero.css ***!
   \************************************************************************************************************/
-
-/* Hero picture */
-.hero {
-  width: 100%;
-  height: 40vh;
-  object-fit: cover;
-}
-
-/* Hero background */
-
 .hero--main {
   background:  url('/images/photos/kisasztal.JPG') no-repeat center / cover;
   background-blend-mode: multiply;
@@ -1148,8 +1039,6 @@ header {
   
   
 }
-
-/* Hero text */
 
   .text__hero {
     width: 75%;
@@ -1353,8 +1242,6 @@ footer {
 /*!*************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/icons.css ***!
   \*************************************************************************************************************/
-/* Social media icons */
-
 .icons--wrapper {
     /*width:           50%;*/
     height:          2rem;
