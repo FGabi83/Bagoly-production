@@ -24,7 +24,15 @@ function showDetails() {
       icon.classList.add("hidden");
       //Hide headline
       headline.classList.add("hidden");
-      
+
+      const siteHeader = document.querySelector("header");
+      const headerHeight = siteHeader ? siteHeader.offsetHeight : 80; // fallback 80px
+      const elementTop = selectedItem.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+      window.scrollTo({
+        top: elementTop,
+        behavior: "smooth" 
+       });
     });
     
   });
@@ -46,8 +54,19 @@ function showDetails() {
       allContents.forEach(content => content.classList.remove("visible-content"));
       allIcons.forEach(icon => icon.classList.remove("hidden"));
       headline.classList.remove("hidden");
+
+      const siteHeader = document.querySelector("header");
+      const headerHeight = siteHeader ? siteHeader.offsetHeight : 80;
+      const elementTop = headline.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+      window.scrollTo({
+        top: elementTop,
+        behavior: "smooth"
+      });
+
       
     });
+      
   });
 
  
