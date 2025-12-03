@@ -28,23 +28,32 @@
         <h1 class="title title__center">Impresszum</h1>
         <div class="impressium--wrapper">
           <h2 class="subtitle title__light">Vállalkozás adatai</h2>
-          <p class="text__dark"> <span class="text__bold">Cégnév:</span> Bagoly Pubs Kft.</span></p>
-          <p class="text__dark"> <span class="text__bold">Székhely:</span> 1031. Budapest, Ányos utca 4. 3. em. 7. ajtó</span></p>
-          <p class="text__dark"> <span class="text__bold">Levelezési cím:</span> 1031. Budapest, Ányos utca 4. 3. em. 7. ajtó</span></p>
+          <p class="text__dark"> <span class="text__bold">Cégnév:</span> Bagoly Pubs Kft.</p>
+          <p class="text__dark"> <span class="text__bold">Székhely:</span> 1031. Budapest, Ányos utca 4. 3. em. 7. ajtó</p>
+          <p class="text__dark"> <span class="text__bold">Levelezési cím:</span> 1031. Budapest, Ányos utca 4. 3. em. 7. ajtó</p>
           <p class="text__dark"> <span class="text__bold">Adószám:</span> 32473371-2-41</span></p>
-          <p class="text__dark"> <span class="text__bold">A céget bejegyző hatóság:</span> Pest Megyei Kormányhivatal</span></p>
-          <p class="text__dark"> <span class="text__bold">Cégjegyzékszám:</span> 01-09-426006</span></p>
-          <p class="text__dark"> <span class="text__bold">Kamara:</span> Budapesti Kereskedelmi és Iparkamara</span></p>
-          <p class="text__dark"> <span class="text__bold">E-mail:</span> info@bagolypub.hu</span></p>
+          <p class="text__dark"> <span class="text__bold">A céget bejegyző hatóság:</span> Pest Megyei Kormányhivatal</p>
+          <p class="text__dark"> <span class="text__bold">Cégjegyzékszám:</span> 01-09-426006</p>
+          <p class="text__dark"> <span class="text__bold">Kamara:</span> Budapesti Kereskedelmi és Iparkamara</p>
+          <p class="text__dark"> <span class="text__bold">E-mail: </span> <span id="email"></span></p>
           <div class="impressium--subwrapper">     
             <h2 class="subtitle title__light">Tárhelyszolgáltató adatai     </h2>
-            <p class="text__dark"> <span class="text__bold">Cégnév:</span> Rackhost Zrt.      </span></p>
-            <p class="text__dark"> <span class="text__bold">Székhely:</span> 6722 Szeged, Tisza Lajos körút 41.      </span></p>
-            <p class="text__dark"> <span class="text__bold">Adószám:</span> 25333572-2-06</span></p>
-            <p class="text__dark"> <span class="text__bold">Cégjegyzékszám:</span> 06-10-000489</span></p>
-            <p class="text__dark"> <span class="text__bold">E-mail:</span> info@rackhost.hu</span></p>
+            <p class="text__dark"> <span class="text__bold">Cégnév:</span> Rackhost Zrt.</p>
+            <p class="text__dark"> <span class="text__bold">Székhely:</span> 6722 Szeged, Tisza Lajos körút 41.</p>
+            <p class="text__dark"> <span class="text__bold">Adószám:</span> 25333572-2-06</p>
+            <p class="text__dark"> <span class="text__bold">Cégjegyzékszám:</span> 06-10-000489</p>
+            <p class="text__dark"> <span class="text__bold">E-mail:</span> info@rackhost.hu</p>
           </div>
         </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const email = "info" + "@" + "bagolypub.hu";
+            const el = document.getElementById("email");
+            if (el) {
+              el.innerHTML = '<a href="mailto:' + email + '" class="highlighted-text email">' + email + '</a>';
+            }
+          });
+        </script>
       </main>
       <footer>
         <div class="icons--wrapper"><a href="https://www.facebook.com/profile.php?id=61558827775371" target="_blank" aria-label="Bagoly Pub Facebook oldala"><i class="icons icons__light fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com" target="_blank" aria-label="Bagoly Pub Instagram oldala"><i class="icons icons__light fa-brands fa-instagram"></i></a></div>
